@@ -56,7 +56,7 @@ def _seed_defaults():
 
     if Project.query.count() == 0:
         starters = [
-            ("Typing Challenge Website",
+            ("kki game",
              "Speed-test your typing with real-time WPM and accuracy charts.",
              "JavaScript, HTML, CSS",
              "https://github.com/", "#", "project1.png"),
