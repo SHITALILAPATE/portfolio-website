@@ -56,8 +56,8 @@ def seed_projects():
                 title="Kiki's Delivery Game",
                 description="Fly on your broomstick",
                 tech_stack="JavaScript, HTML, CSS",
-                github_url="https://github.com/SHITALILAPATE",
-                demo_url="#",
+                github_url="https://github.com/SHITALILAPATE/Kiki-s-Delivery-Game-",
+                demo_url="#https://kiki-s-delivery-game.onrender.com/",
                 image="kiki.png"
             ),
 
@@ -65,8 +65,8 @@ def seed_projects():
                 title="Calculator App",
                 description="Simple aesthetic calculator app",
                 tech_stack="HTML, CSS, JS",
-                github_url="https://github.com/SHITALILAPATE",
-                demo_url="#",
+                github_url="https://github.com/SHITALILAPATE/Calculator",
+                demo_url="#https://calculator-cxpb.onrender.com/",
                 image="calculator.png"
             ),
 
@@ -75,7 +75,7 @@ def seed_projects():
                 description="Futuristic developer portfolio",
                 tech_stack="HTML, CSS, JS",
                 github_url="https://github.com/SHITALILAPATE",
-                demo_url="#",
+                demo_url="#https://calculator-cxpb.onrender.com/",
                 image="portfolio.png"
             ),
 
@@ -83,8 +83,8 @@ def seed_projects():
                 title="PhotoBooth",
                 description="Photo booth using webcam filters",
                 tech_stack="JavaScript, HTML, CSS, Python",
-                github_url="https://github.com/SHITALILAPATE",
-                demo_url="#",
+                github_url="https://github.com/SHITALILAPATE/Apple-PhotoBooth",
+                demo_url="https://apple-photobooth.onrender.com",
                 image="photobooth.png"
             ),
 
@@ -92,8 +92,8 @@ def seed_projects():
                 title="Pomodoro Timer",
                 description="Focus timer productivity app",
                 tech_stack="Python, Flask, HTML, CSS, JS",
-                github_url="https://github.com/SHITALILAPATE",
-                demo_url="#",
+                github_url="https://github.com/SHITALILAPATE?tab=repositories",
+                demo_url="#https://pomodoro-timer-jcrk.onrender.com/",
                 image="pomodoro.png"
             ),
 
@@ -101,8 +101,8 @@ def seed_projects():
                 title="Habit Tracker",
                 description="Track habits and progress",
                 tech_stack="JavaScript, HTML, CSS, Python",
-                github_url="https://github.com/SHITALILAPATE",
-                demo_url="#",
+                github_url="https://github.com/SHITALILAPATE/Habit-Tracke",
+                demo_url="#https://habit-tracke.onrender.com",
                 image="habit.png"
             ),
 
