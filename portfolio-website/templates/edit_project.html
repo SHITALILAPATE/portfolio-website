@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ "Edit" if project else "New" }} project{% endblock %}
+{% block content %}
+<section class="section">
+  <p class="eyebrow pink">{{ "edit" if project else "create" }}</p>
+  <h2>{{ "Edit" if project else "New" }} <span class="gradient-text">project</span></h2>
+
+  <form method="POST" enctype="multipart/form-data" class="glass-card pad auth-card auth-form">
+    <label>Title <input name="title" required maxlength="120" value="{{ project.title if project }}"></label>
+    <label>Description <textarea name="description" required rows="4" maxlength="1000">{{ project.description if project }}</textarea></label>
+    <label>Tech stack (comma-separated)
+      <input name="tech_stack" required maxlength="255" value="{{ project.tech_stack if project }}">
+    </label>
+    <label>GitHub URL <input name="github_url" maxlength="255" value="{{ project.github_url if project else '#' }}"></label>
+    <label>Demo URL <input name="demo_url" maxlength="255" value="{{ project.demo_url if project else '#' }}"></label>
+    <label>Image <input type="file" name="image" accept="image/*"></label>
+    {% if project %}<p class="muted small">Current: {{ project.image }}</p>{% endif %}
+    <button class="btn-neon w-full" type="submit">{{ "Save changes" if project else "Create project" }}</button>
+    <a class="btn-ghost w-full center" href="{{ url_for('main.dashboard') }}">Cancel</a>
+  </form>
+</section>
+{% endblock %}

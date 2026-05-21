@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Skills — Shital Ilpate{% endblock %}
+{% block content %}
+<section class="section">
+  <p class="eyebrow pink">skills</p>
+  <h2>My <span class="gradient-text">toolkit</span></h2>
+  <div class="grid-4 mt-3">
+    {% for name, icon in [('Python','🐍'),('Flask','🧪'),('HTML','🧡'),('CSS','🎨'),('JavaScript','⚡'),('SQL','🗄️'),('GitHub','🐙'),('Cloud Computing','☁️')] %}
+      <div class="glass-card pad center skill"><div class="skill-icon">{{ icon }}</div><span>{{ name }}</span></div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

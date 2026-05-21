@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Contact — Shital Ilpate{% endblock %}
+{% block content %}
+<section class="section">
+  <p class="eyebrow mint">contact</p>
+  <h2>Let's <span class="gradient-text">connect</span></h2>
+  <div class="contact-grid mt-3">
+    <form method="POST" class="glass-card pad">
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Email<input name="email" type="email" required maxlength="150"></label>
+      <label>Message<textarea name="message" rows="5" required maxlength="1000"></textarea></label>
+      <button type="submit" class="btn-neon">Send Message</button>
+    </form>
+    <aside class="glass-card pad">
+      <h3>Other ways to reach me</h3>
+      <p class="muted small">Most active on GitHub & Instagram.</p>
+      <ul class="contact-list">
+        <li><a href="https://www.linkedin.com/in/shital-ilpate-0223852a3/">✉️ linkdin</a></li>
+        <li><a href="https://github.com/SHITALILAPATE" target="_blank">🐙 GitHub</a></li>
+        <li><a href="https://www.instagram.com/sheetalbuilds/" target="_blank">📷 Instagram</a></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+{% endblock %}
