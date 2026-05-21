@@ -16,158 +16,74 @@ Projects — Shital Ilpate
 
   <div class="grid-3 mt-3">
 
-    <!-- Project 1 -->
-    <article class="glass-card project">
+    {% for p in projects %}
 
-      <div class="project-img">
-        <img
-          src="{{ url_for('static', filename='images/project1.png') }}"
-          alt="AI Photo Booth"
-          loading="lazy"
-        >
-      </div>
+      <article class="glass-card project">
 
-      <div class="pad">
+        <div class="project-img">
 
-        <h3>AI Photo Booth</h3>
-
-        <p class="muted small">
-          Python + Flask photo booth app with webcam capture,
-          live filters, and snapshot saving.
-        </p>
-
-        <div class="chips">
-          <span class="tag">Python</span>
-          <span class="tag">Flask</span>
-          <span class="tag">OpenCV</span>
-          <span class="tag">JavaScript</span>
-        </div>
-
-        <div class="project-cta">
-
-          <a
-            class="btn-ghost small"
-            href="https://github.com/SHITALILAPATE/portfolio-website"
-            target="_blank"
+          <img
+            src="{{ url_for('static', filename='images/' ~ p.image) }}"
+            alt="{{ p.title }}"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='/static/images/project1.png';"
           >
-            GitHub
-          </a>
-
-          <a
-            class="btn-neon small"
-            href="#"
-            target="_blank"
-          >
-            Live Demo
-          </a>
 
         </div>
 
-      </div>
+        <div class="pad">
 
-    </article>
+          <h3>{{ p.title }}</h3>
 
-    <!-- Project 2 -->
-    <article class="glass-card project">
+          <p class="muted small">
+            {{ p.description }}
+          </p>
 
-      <div class="project-img">
-        <img
-          src="{{ url_for('static', filename='images/project1.png') }}"
-          alt="Habit Tracker"
-          loading="lazy"
-        >
-      </div>
+          <div class="chips">
 
-      <div class="pad">
+            {% if p.tech_stack %}
 
-        <h3>Habit Tracker</h3>
+              {% for tech in p.tech_stack.split(',') %}
 
-        <p class="muted small">
-          Daily habit tracking web app with progress monitoring
-          and clean dashboard UI.
-        </p>
+                <span class="tag">
+                  {{ tech.strip() }}
+                </span>
 
-        <div class="chips">
-          <span class="tag">Python</span>
-          <span class="tag">Flask</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">HTML/CSS</span>
-        </div>
+              {% endfor %}
 
-        <div class="project-cta">
+            {% else %}
 
-          <a
-            class="btn-ghost small"
-            href="https://github.com/SHITALILAPATE/portfolio-website"
-            target="_blank"
-          >
-            GitHub
-          </a>
+              <span class="tag">No Tech Added</span>
 
-          <a
-            class="btn-neon small"
-            href="#"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+            {% endif %}
 
-        </div>
+          </div>
 
-      </div>
+          <div class="project-cta">
 
-    </article>
+            <a
+              class="btn-ghost small"
+              href="{{ p.github_url }}"
+              target="_blank"
+            >
+              GitHub
+            </a>
 
-    <!-- Project 3 -->
-    <article class="glass-card project">
+            <a
+              class="btn-neon small"
+              href="{{ p.demo_url }}"
+              target="_blank"
+            >
+              Live Demo
+            </a>
 
-      <div class="project-img">
-        <img
-          src="{{ url_for('static', filename='images/project1.png') }}"
-          alt="Portfolio Website"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="pad">
-
-        <h3>Portfolio Website</h3>
-
-        <p class="muted small">
-          Futuristic animated developer portfolio built using
-          Flask, custom CSS, and interactive UI effects.
-        </p>
-
-        <div class="chips">
-          <span class="tag">Flask</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Three.js</span>
-        </div>
-
-        <div class="project-cta">
-
-          <a
-            class="btn-ghost small"
-            href="https://github.com/SHITALILAPATE/portfolio-website"
-            target="_blank"
-          >
-            GitHub
-          </a>
-
-          <a
-            class="btn-neon small"
-            href="#"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          </div>
 
         </div>
 
-      </div>
+      </article>
 
-    </article>
+    {% endfor %}
 
   </div>
 
